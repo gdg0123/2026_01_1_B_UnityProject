@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5247222011894256536
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34007
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.80258
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6951361525808551133}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3902647436572874528}
+  m_SourcePrefab: {fileID: 100100000, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+--- !u!1 &4904570968893845193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c03163bdec8c29b4e8d1a49954bb5918, type: 3}
+  m_PrefabInstance: {fileID: 5247222011894256536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6951361525808551133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904570968893845193}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: -0.1}
+  m_Center: {x: 0, y: 0.5, z: -0.05}
+--- !u!114 &3902647436572874528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904570968893845193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52cbeb00b9c6594f9625f71f441e864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZAxisMover
+  speed: 5
+  timer: 5
