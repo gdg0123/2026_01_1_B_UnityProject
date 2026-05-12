@@ -1,0 +1,60 @@
+using UnityEngine;
+
+public class GridCell : MonoBehaviour
+{
+    public int x, y;                              //그리드에서의 위치(좌표)
+    public DraggableRank currentRank;             //현재 칸에 있는 계급장
+    public SpriteRenderer cellRenderers;          //칸에 이미지 렌더러
+
+    private void Awake()
+    {
+        cellRenderers = GetComponent<SpriteRenderer>();     //컨포넌트 참조 가져오기
+    }
+
+
+    //좌표 초기화
+    public void Initialize(int gridX, int girdY)
+    {
+        x = gridX;
+        y = girdY;
+        name = "Cell_" + x + "," + y;               //이름 설정
+    }
+
+    public bool isEmpty()                            //칸이 비어 있는지 확인
+    {
+        return currentRank == null;                //비어 있으면 true 아니면 false 반환
+    }
+
+    public bool ContainsPosition(Vector3 position)     //특정 위치가 이 칸에 있는지 확인
+    {
+        Bounds bounds = cellRenderers.bounds;                     //칸의 경계 가져오기
+        return bounds.Contains(position);                         //경계 안에 위치가 있는지 확인
+    }
+
+    public void SetRank(DraggableRank rank)                       //칸에 계급장 설정
+    {
+        currentRank = rank;                                       //현재 계급장 설정
+
+        if(rank != null)
+        {
+            rank.currentCell = this;                              //계급장에 현재 칸 정보 알려주기
+        }
+
+        rank.originalPosition = new Vector3(transform.position.x, transform.position.y, 0);           //z위치를 0으로 설정
+        rank.transform.position = new Vector3(transform.position.x, transform.position.y, 0);         //
+    }
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
